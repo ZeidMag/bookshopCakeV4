@@ -1,53 +1,99 @@
-# CakePHP Application Skeleton
+# Bookshop Application Backend (PHP CakePHP & MySQL)
 
-![Build Status](https://github.com/cakephp/app/actions/workflows/ci.yml/badge.svg?branch=master)
-[![Total Downloads](https://img.shields.io/packagist/dt/cakephp/app.svg?style=flat-square)](https://packagist.org/packages/cakephp/app)
-[![PHPStan](https://img.shields.io/badge/PHPStan-level%207-brightgreen.svg?style=flat-square)](https://github.com/phpstan/phpstan)
+### Live project [https://zeidmagboub.ly](https://zeidmagboub.ly)
 
-A skeleton for creating applications with [CakePHP](https://cakephp.org) 4.x.
+### Frontend repo [https://github.com/ZeidMag/bookshop-frontend](https://github.com/ZeidMag/bookshop-frontend/tree/cakeV4changes)
 
-The framework source code can be found here: [cakephp/cakephp](https://github.com/cakephp/cakephp).
+### Backend repo [https://github.com/ZeidMag/bookshop](https://github.com/ZeidMag/bookshopCakeV4)
 
-## Installation
+---
 
-1. Download [Composer](https://getcomposer.org/doc/00-intro.md) or update `composer self-update`.
-2. Run `php composer.phar create-project --prefer-dist cakephp/app [app_name]`.
+## `Purpose:`
 
-If Composer is installed globally, run
+The project serves to demonstrate knowledge of (**ReactJS** + **CakePHP** + **MySQL**) `Stack`.
 
-```bash
-composer create-project --prefer-dist cakephp/app
+## `Description:`
+
+This is a simple application for a bookshop, utilizing the following:
+
+-   [ReactJS](https://reactjs.org/)
+-   [CakePHP](https://cakephp.org/)
+-   [MySQL](https://www.mysql.com/)
+
+The user of the application can:
+
+1. View all books & authors.
+2. Search Books.
+3. Login / Logout.
+4. Add / Edit Books & Authors.
+5. Rent a Book.
+6. Update profile (username / password).
+7. Review rent history.
+
+## `Backend Features:`
+
+The **`server`** is built with _CakePHP framework_, containing:
+
+-   CRUD operations
+-   Passowrd encryption
+-   Authentication system
+-   Custom JSON responses
+
+The **`database`** is built with _MySQL_, containing:
+
+-   Books, Authors, Rents & Users tables.
+-   Rent table has a composite key consists of User & Book ids.
+
+To review the database schema, please refer to the file `db-tables.sql`.
+
+## `Frontend Features:`
+
+The **`frontend`** is built with _ReactJS_ and _MaterialUI_ library containing:
+
+-   React Class & Function components.
+-   Redux State management.
+-   Redux Thunk middleware.
+-   Axios HTTP client.
+-   MomentJS date handler.
+-   React-router-dom routing handler.
+-   MaterialUI components.
+
+The **`frontend`** also features a **custom search bar**, **custom scrollbar**, reusable **Alert** & **Spinner** components, reusable **API call handler** as well as a **Regex validator**.
+
+`Styling` is done with **MaterialUI**, **SASS**, **Inline-CSS** and **CSS files**.
+
+---
+
+## `User Walkthrough:`
+
+When accessing the [application](https://zeidmagboub.ly/bookshop), the user is presented with **Books page** that features a list of books along with details about each book such as (author name / number of pages ...etc) along with the ability to search the books list by inserting book name or author name.
+
+Next tab is the list of **Authors page**, and the last tab is to login.
+
+In order to rent a book you must login first through **Login page**.
+
+You can register through **Registration page** login afterwards, alternatively you can use the following credentials:
+
+```
+username: test
 ```
 
-In case you want to use a custom app dir name (e.g. `/myapp/`):
-
-```bash
-composer create-project --prefer-dist cakephp/app myapp
+```
+password: 123
 ```
 
-You can now either use your machine's webserver to view the default home page, or start
-up the built-in webserver with:
+Once logged in, you can go back to the **Books page** on the navbar and rent a book.
 
-```bash
-bin/cake server -p 8765
-```
+Additionally, two more tabs will appear, one is a **Management page** tab to add / edit books and authors, and the other is a drop down menu that leads to either **Logout action** or **Profile page**.
 
-Then visit `http://localhost:8765` to see the welcome page.
+Profile page will allow you to _update_ your username and password and _review_ rent history (if any).
 
-## Update
+---
 
-Since this skeleton is a starting point for your application and various files
-would have been modified as per your needs, there isn't a way to provide
-automated upgrades, so you have to do any updates manually.
+## `Possible Future Improvements:`
 
-## Configuration
+As the project's main purpose is to demonstrate konwledge rather than to be a full-fledged application, there are some features left out that can further improve the project:
 
-Read and edit the environment specific `config/app_local.php` and setup the 
-`'Datasources'` and any other configuration relevant for your application.
-Other environment agnostic settings can be changed in `config/app.php`.
-
-## Layout
-
-The app skeleton uses [Milligram](https://milligram.io/) (v1.3) minimalist CSS
-framework by default. You can, however, replace it with any other library or
-custom styles.
+-   Restrict resource editing (books & authors) to only their creator adding user id to each book & author applying relavent checks.
+-   Introduce authorization levels.
+-   Improve UI/UX.
