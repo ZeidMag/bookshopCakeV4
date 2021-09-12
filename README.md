@@ -4,13 +4,11 @@
 
 ### Frontend repo [https://github.com/ZeidMag/bookshop-frontend](https://github.com/ZeidMag/bookshop-frontend)
 
-### Backend repo [https://github.com/ZeidMag/bookshop](https://github.com/ZeidMag/bookshopCakeV4)
-
 ---
 
 ## `Purpose:`
 
-The project serves to demonstrate knowledge of (**ReactJS** + **CakePHP** + **MySQL**) `Stack`.
+The project serves to demonstrate the use of (**ReactJS** + **CakePHP** + **MySQL**) `Stack`.
 
 ## `Description:`
 
@@ -42,7 +40,6 @@ The **`server`** is built with _CakePHP framework_, containing:
 The **`database`** is built with _MySQL_, containing:
 
 -   Books, Authors, Rents & Users tables.
--   Rent table has a composite key consists of User & Book ids.
 
 To review the database schema, please refer to the file `db-tables.sql`.
 
@@ -56,9 +53,10 @@ The **`frontend`** is built with _ReactJS_ and _MaterialUI_ library containing:
 -   Axios HTTP client.
 -   MomentJS date handler.
 -   React-router-dom routing handler.
--   MaterialUI components.
+-   Material-UI components.
+-   Responsive design.
 
-The **`frontend`** also features a **custom search bar**, **custom scrollbar**, reusable **Alert** & **Spinner** components, reusable **API call handler** as well as a **Regex validator**.
+The **`frontend`** also features a **custom search bar**, **custom scrollbar**, **custom alerts**, reusable **Alert** & **Spinner** components,**private routing**, reusable **API call handler** as well as a **Regex validator**.
 
 `Styling` is done with **MaterialUI**, **SASS**, **Inline-CSS** and **CSS files**.
 
